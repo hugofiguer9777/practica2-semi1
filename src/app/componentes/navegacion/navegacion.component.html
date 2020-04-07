@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a routerLink="/" class="navbar-brand">uSocial</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="form-inline navbar-nav ml-auto">
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light" type="button" id="button-addon2">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a class="nav-link" routerLink="/perfil" routerLinkActive="active">Editar perfil</a>
+                    <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="logout()">Log out</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>

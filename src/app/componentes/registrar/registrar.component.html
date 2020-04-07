@@ -1,0 +1,65 @@
+
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">Registrate !</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="form-row">
+                        <div class="name">Nombre completo</div>
+                        <div class="value">
+                            <div class="input-group-desc">
+                                <input class="input100" type="text" name="name" [(ngModel)]="user.nombre">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="name">Username</div>
+                        <div class="value">
+                            <div class="input-group-desc">
+                                <input class="input100" type="text" name="username" [(ngModel)]="user.username">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="name">Password</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <input class="input100" type="password" name="pass" [(ngModel)]="user.pass">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="name">Confirmar password</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <input class="input100" type="password" name="againpassword" [(ngModel)]="confirmar">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="name">Foto de Perfil</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <img src="{{ fotoperfil != '' ? fotoperfil : 'http://ssl.gstatic.com/accounts/ui/avatar_2x.png' }}" class="avatar img-circle img-thumbnail" alt="avatar">
+                                <!-- <input type="file" class="text-center center-block file-upload"> -->
+                                <!-- ESTE ES EL FILE -->
+                                <input type="file" id="file" aria-label="File browser example" (change)="changeListener($event)"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="btn btn--radius-2 btn--red" (click)="registrarse()">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
